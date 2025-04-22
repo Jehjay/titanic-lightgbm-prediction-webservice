@@ -1,0 +1,194 @@
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [6472]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./async.py", line 53, in predict
+    job = predict_job.delay(data)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/celery/app/task.py", line 422, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/celery/app/task.py", line 576, in apply_async
+    **options
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/celery/app/base.py", line 763, in send_task
+    with self.producer_or_acquire(producer) as P:
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/celery/utils/objects.py", line 85, in __enter__
+    *self.fb_args, **self.fb_kwargs
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/resource.py", line 81, in acquire
+    R = self.prepare(R)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/pools.py", line 60, in prepare
+    p = p()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/utils/functional.py", line 186, in __call__
+    return self.evaluate()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/utils/functional.py", line 189, in evaluate
+    return self._fun(*self._args, **self._kwargs)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/pools.py", line 40, in create_producer
+    conn = self._acquire_connection()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/pools.py", line 37, in _acquire_connection
+    return self.connections.acquire(block=True)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/resource.py", line 81, in acquire
+    R = self.prepare(R)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/connection.py", line 1017, in prepare
+    resource = resource()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/utils/functional.py", line 186, in __call__
+    return self.evaluate()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/utils/functional.py", line 189, in evaluate
+    return self._fun(*self._args, **self._kwargs)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/connection.py", line 989, in new
+    return self.connection.clone()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/connection.py", line 618, in clone
+    return self.__class__(**dict(self._info(resolve=False), **kwargs))
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/connection.py", line 628, in _info
+    D = self.transport.default_connection_params
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/connection.py", line 911, in transport
+    self._transport = self.create_transport()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/connection.py", line 607, in create_transport
+    return self.get_transport_cls()(client=self)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/kombu/transport/redis.py", line 1089, in __init__
+    raise ImportError('Missing redis library (pip install redis)')
+ImportError: Missing redis library (pip install redis)
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [8459]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [8530]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [8581]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [15530]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [8349]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./async.py", line 61, in predict
+    task = predict_task.delay(data)
+NameError: name 'predict_task' is not defined
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "./async.py", line 61, in predict
+    task = predict_task.delay(data)
+NameError: name 'predict_task' is not defined
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [8562]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [5168]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

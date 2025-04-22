@@ -1,0 +1,396 @@
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [18010]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [16501]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [5407]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+WARNING:uvicorn.error:Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_readers.py", line 81, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:uvicorn.error:Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/h11/_readers.py", line 81, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./sync.py", line 31, in predict
+    columns = lgb.feature_name()
+AttributeError: module 'lightgbm' has no attribute 'feature_name'
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./sync.py", line 31, in predict
+    columns = lgb.feature_name()
+AttributeError: module 'lightgbm' has no attribute 'feature_name'
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./sync.py", line 31, in predict
+    columns = lgb.feature_name()
+AttributeError: module 'lightgbm' has no attribute 'feature_name'
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [8105]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [8504]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./sync.py", line 31, in predict
+    columns = lightgbm_classifier_model.booster_boost.feature_name()
+AttributeError: 'Booster' object has no attribute 'booster_boost'
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [9732]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+ERROR:uvicorn.error:[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [6444]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./sync.py", line 31, in predict
+    columns = lgb.booster_feature_name()
+AttributeError: module 'lightgbm' has no attribute 'booster_feature_name'
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [5087]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./sync.py", line 34, in predict
+    predictions_probability = lightgbm_classifier_model.predict_proba(df)
+AttributeError: 'Booster' object has no attribute 'predict_proba'
+ERROR:uvicorn.error:Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/home/jehoram/Desktop/FILES/lightgbm/.venv/lib/python3.6/site-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./sync.py", line 34, in predict
+    predictions_probability = lightgbm_classifier_model.predict_proba(df)
+AttributeError: 'Booster' object has no attribute 'predict_proba'
+ERROR:root:API NOT FUNCTIONING CORRECTLY
+INFO:uvicorn.error:Started server process [6976]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:uvicorn.error:Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
