@@ -15,9 +15,17 @@ using the lightgbm model on Titanic data and implementing a synchronous API and 
 + The sync api endpoint implementation can be found in the sync.py file
 
 ## Requirements
+[Docker](https://docs.docker.com/get-started/get-docker/)
 
 ## Techstack 
-
++ [LightGBM](https://lightgbm.readthedocs.io/en/stable/)
++ [FastAPI](https://fastapi.tiangolo.com/)
++ [uvicorn](https://www.uvicorn.org/)
++ [Celery](https://docs.celeryq.dev/en/stable/)
++ [OpenAPI](https://swagger.io/specification/)
++ [SwaggerUI](https://swagger.io/tools/swagger-ui/)
++ [Redis](https://redis.io/)
++ [Docker](https://docs.docker.com/get-started/get-docker/)
 
 ## **Running the web service**
 + Uvicorn - was used to serve the web service and containerised in Dockerfile.sync and Dockerfile.async, respectively. To load the server for sync and async endpoints, run the following commands in the console:
@@ -39,3 +47,5 @@ sync_testing.py
 async_testing.py
 ```
 
+## **Developer**
+[Jehoram Mwila](https://www.linkedin.com/in/jehoram-m-1b1772124/), Data and MLOps Engineer
