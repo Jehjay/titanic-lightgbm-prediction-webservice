@@ -5,14 +5,14 @@
 using the lightgbm model on Titanic data and implementing a synchronous API and an asynchronous API approach.
 
 ## **Building the webservice** 
-+ The standard library’s virtual environment tool venv was used to develop the service in a virtual environment and install packages. 
-+ A list of all installed packages and their versions can be found in the requirements.txt file. 
++ The standard library’s virtual environment tool `venv`, was used to develop the service in a virtual environment and install packages. 
++ A list of all installed packages and their versions can be found in the `requirements.txt` file. 
 + Titanic data was obtained from Kaggle. Subsequent steps for loading, preprocessing, analysing and transforming data are carried out in the model.py file 
-+ **LightGBM** - was installed to implement the prediction model in the model.py file. In addition, the model was exported to be used in the sync and async API's. 
++ **LightGBM** - was installed to implement the prediction model in the `model.py` file. In addition, the model was exported to be used in the sync and async API. 
 + **FastAPI** - was used to set up sync and async endpoints.
 + **Logging** - was used to track the web service performance.
-+ **Celery** - an open-source asynchronous job queue based on distributed message passing, supports scheduling and focuses on operations in real time, was used to implement the async api using Redis as a message broker to run in the async.py file
-+ The sync api endpoint implementation can be found in the sync.py file
++ **Celery** - an open-source asynchronous job queue based on distributed message passing, supports scheduling and focuses on operations in real time, was used to implement the async api using Redis as a message broker to run in the `async.py` file
++ The sync api endpoint implementation can be found in the `sync.py` file
 
 ## Requirements
 [Docker](https://docs.docker.com/get-started/get-docker/)
@@ -28,7 +28,7 @@ using the lightgbm model on Titanic data and implementing a synchronous API and 
 + [Docker](https://docs.docker.com/get-started/get-docker/)
 
 ## **Running the web service**
-+ Uvicorn - was used to serve the web service and containerised in Dockerfile.sync and Dockerfile.async, respectively. To load the server for sync and async endpoints, run the following commands in the console:
++ Uvicorn - was used to serve the web service and containerised in `Dockerfile.sync` and `Dockerfile.async`, respectively. To load the server for sync and async endpoints, run the following commands in the console:
 ```docker
 docker run -p 8000:8000 lgb-fastapi-sync-app
 ```
