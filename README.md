@@ -6,7 +6,7 @@ using the lightgbm model on Titanic data and implementing a synchronous API and 
 <i>Techstack</i>: Python 3.7, numpy, pandas, matplotlib, sklearn, seaborn. </li>
 </ul>
 
-<h2> __Building the webservice__ </h2>		
+<h2> **Building the webservice** </h2>		
 ❖ The standard library’s virtual environment tool venv was used to develop the service in a virtual environment and install packages.
 
 
@@ -30,7 +30,7 @@ using the lightgbm model on Titanic data and implementing a synchronous API and 
 
 ❖ The sync api endpoint implementation can be found in the sync.py file
 
-<h2> __Running the web service__ </h2>	
+<h2> **Running the web service** </h2>	
 ❖ **Uvicorn** was used to serve the web service and containerised in Dockerfile.sync and Dockerfile.async, respectively. To load the server for sync and async endpoints, run the following commands in the console:
 
 
@@ -46,7 +46,7 @@ docker run -p 8000:8000 lgb-fastapi-async-app
 
 ❖ If everything works as intended, you can see the server running at http://127.0.0.1:8000.
 
-<h2> __Using the web service__ </h2>
+<h2> **Using the web service** </h2>
 ❖ After starting your server, you can run the following scripts for sync and async endpoints and provide a JSON input to see if the web service works as intended:
 
 
