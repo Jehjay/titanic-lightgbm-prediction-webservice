@@ -23,7 +23,7 @@ using the lightgbm model on Titanic data and implementing a synchronous API and 
 
 **<h2> Running the web service </h2>**	
 <ul>
-<li> **Uvicorn** - was used to serve the web service and containerised in Dockerfile.sync and Dockerfile.async, respectively. To load the server for sync and async endpoints, run the following commands in the console: </li>
+<li> Uvicorn - was used to serve the web service and containerised in Dockerfile.sync and Dockerfile.async, respectively. To load the server for sync and async endpoints, run the following commands in the console: </li>
 ```docker
 docker run -p 8000:8000 lgb-fastapi-sync-app
 ```
@@ -37,10 +37,11 @@ docker run -p 8000:8000 lgb-fastapi-async-app
 **<h2> Using the web service </h2>**
 <ul>
 <li> After starting your server, you can run the following scripts for sync and async endpoints and provide a JSON input to see if the web service works as intended: </li>
+</ul>
 ```python
 sync_testing.py
 ```
 ```python
 async_testing.py
 ```
-</ul>
+
